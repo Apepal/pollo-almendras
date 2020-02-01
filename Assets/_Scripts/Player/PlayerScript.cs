@@ -32,7 +32,7 @@ public class PlayerScript : MonoBehaviour
 	void Start ()
 	{
 		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_animator = GetComponent<Animator>();
+		_animator = GetComponentInChildren<Animator>();
 		_weapon = GetComponentInChildren<WeaponScript>();
 	}
 	
@@ -65,7 +65,8 @@ public class PlayerScript : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.V) && attackTime < Time.time)
 		{
 			_animator.SetTrigger(Attack);
-			attackTime = Time.time + 5f;
+			_weapon.shot();
+			attackTime = Time.time + 0.5f;
 		}
 	}
 

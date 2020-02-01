@@ -28,15 +28,12 @@ public class WeaponScript : MonoBehaviour
         transform.localEulerAngles = new Vector3(transform.rotation.x, transform.rotation.y, currentRotation);
     }
 
-    private void Update()
+    public void shot()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            var quaternion = transform.localScale.x < 0
-                ? Quaternion.Inverse(transform.localRotation)
-                : transform.localRotation;
-            var clone = Instantiate(_bala, transform.position, quaternion);
-            clone.transform.localScale = transform.parent.localScale;
-        }
+        var quaternion = transform.localScale.x < 0
+            ? Quaternion.Inverse(transform.localRotation)
+            : transform.localRotation;
+        var clone = Instantiate(_bala, transform.position, quaternion);
+        clone.transform.localScale = transform.parent.localScale;
     }
 }
