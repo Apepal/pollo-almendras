@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShotScript : MonoBehaviour
 {
-    [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _speed = 15f;
     public float angle = 0f;
     
     private void FixedUpdate()

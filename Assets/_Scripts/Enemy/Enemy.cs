@@ -22,15 +22,20 @@ public abstract class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.x < pointA)
+        Debug.Log(_gameController.currentStatus);
+        if (_gameController.currentStatus != GameStatus.LOSE &&
+            _gameController.currentStatus != GameStatus.PAUSED)
         {
-            movementType = 1f;
-        } else if (transform.position.x > pointB)
-        {
-            movementType = -1f;
-        }
+            if (transform.position.x < pointA)
+            {
+                movementType = 1f;
+            } else if (transform.position.x > pointB)
+            {
+                movementType = -1f;
+            }
 
-        transform.Translate(Vector3.right * movementType * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * movementType * speed * Time.deltaTime);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

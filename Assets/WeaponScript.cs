@@ -14,7 +14,7 @@ public class WeaponScript : MonoBehaviour
     private ShotScript _shot;
     float currentRotation = 0.0f;
     Quaternion yRotation;
-    [SerializeField] private float speed = 40f;
+    [SerializeField] private float speed = 70f;
 
     private void Start()
     {

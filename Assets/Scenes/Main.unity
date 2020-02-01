@@ -303,10 +303,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -704315377
-  m_SortingLayer: 3
+  m_SortingLayerID: -728158479
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2091001c0629245d2b03a316dbdd2c98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a6c5387636c549a6bb2f5f11c54db0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -486,7 +486,7 @@ SpriteRenderer:
   m_SortingLayerID: -704315377
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06d9c08b010854d768caa89ffaf9858e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad3f8ae617eb0afc68f28933c41ea7a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -55206,7 +55206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890421501}
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: -0.27, y: -0.11, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4539872}
@@ -55228,7 +55228,7 @@ MonoBehaviour:
   minYRotation: -45
   maxYRotation: 45
   _bala: {fileID: 2793455775242656807, guid: 83ac751ece60f49588c916f07053f2a2, type: 3}
-  speed: 15
+  speed: 80
 --- !u!1 &946066055
 GameObject:
   m_ObjectHideFlags: 0
@@ -55418,6 +55418,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BasicEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697124931871529415, guid: b102d1211aed5443497aefcece0df3a0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -728158479
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697124931871529415, guid: b102d1211aed5443497aefcece0df3a0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b102d1211aed5443497aefcece0df3a0, type: 3}
@@ -55628,6 +55638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerScript: {fileID: 1482541482}
+  currentStatus: 0
   panelController: {fileID: 1208378008}
   lastPointTransform: {x: 0, y: 0}
 --- !u!1 &1377284388
@@ -56584,6 +56595,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BasicEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697124931871529415, guid: b102d1211aed5443497aefcece0df3a0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -728158479
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697124931871529415, guid: b102d1211aed5443497aefcece0df3a0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b102d1211aed5443497aefcece0df3a0, type: 3}

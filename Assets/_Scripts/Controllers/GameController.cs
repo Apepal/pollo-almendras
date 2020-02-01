@@ -8,15 +8,17 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private PlayerScript _playerScript;
+    
     private int lifes = 3;
     private int lot = 0;
-    private GameStatus currentStatus;
+    public GameStatus currentStatus = GameStatus.PAUSED;
     [SerializeField]
     private PanelController panelController;
 
     [SerializeField]
     private Vector2 lastPointTransform = Vector2.zero;
     
+
     public void changeStatus(GameStatus status)
     {
         switch (status)
@@ -41,12 +43,14 @@ public class GameController : MonoBehaviour
     private void pauseGame(bool pause)
     {
         _playerScript.setPaused(pause);
+        currentStatus = GameStatus.RESUME;
     }
 
     private void endGame()
     {
         _playerScript.setPaused(true);
         _playerScript.die();
+        currentStatus = GameStatus.PAUSED;
     }
 
     public void getDamage()
@@ -64,6 +68,7 @@ public class GameController : MonoBehaviour
         lifes = 3;
         _playerScript.setPaused(true);
         _playerScript.moveTo(lastPointTransform);
+        currentStatus = GameStatus.RESUME;
     }
 
     private void showPanelMenu()
